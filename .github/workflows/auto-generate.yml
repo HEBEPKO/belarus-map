@@ -1,0 +1,26 @@
+name: Auto Update Images JSON
+
+on:
+  push:
+    paths:
+      - 'image/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      
+      - name: Run Generator
+        run: node js/generate-path.js
+        
+      - name: Commit Changes
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "actions@github.com"
+          git add js/regionImages.json
+          git commit -m "Chore: Автоматическое обновление списка картинок" || exit 0
+          git push
