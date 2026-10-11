@@ -16,7 +16,7 @@ if (fs.existsSync(imageDir)) {
         if (fs.statSync(regionPath).isDirectory()) {
             const file = fs.readdirSync(regionPath)
             .filter(file => /\.(jpe?g|jpg|png|)$/i.test(file))
-            .map(file => `../image/${region}/${file}`);
+            .map(file => `./image/${region}/${file}`);
 
             result[region] = file;
         }
