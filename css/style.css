@@ -8,6 +8,11 @@ body {
 }
 h1 { color: #2c3e50; }
 
+.main{
+    display: block;
+    text-align: center;
+}
+
 /* Контейнер для карты */
 .map-container {
     width: 100vw;
@@ -16,27 +21,24 @@ h1 { color: #2c3e50; }
     margin-top: 20px;
 }
 
-#belarus-map {
-    width: 100%;
-    height: auto;
-    background-color: #ffcc00;
-}
+.map {
+    .belarus-map{
+        width: 100%;
+        height: auto;
+    }
 
-#belarus-map path{
-    stroke-width: 3px;
-    stroke: #313635;
-}
-/* Кастомные стили для оживления областей SVG */
-.region {
-    cursor: pointer;
-    stroke: #ffffff ;
-    stroke-width: 2.5px ;
-    cursor: pointer;
-    transition: filter 0.2s, stroke 0.2s;
-}
+    .region {
+        cursor: pointer;
+        fill-opacity: 1;
+        stroke: #c96b1f;
+        stroke-width: 2.5px;
+        transition: filter 0.2s, stroke 0.2s, fill 0.2s;
+    }
 
-/* Эффект красивого свечения и выделения границ при наведении */
-.map_wrapper svg path.region:hover {
-    filter: drop-shadow(0px 5px 12px rgba(0,0,0,0.4)) ;
-    stroke: #ffcc00 ;
+    .region:hover {
+        fill-opacity: 0.75;
+        stroke-width: 4.5px;
+        filter: drop-shadow(0px 5px 12px rgba(0,0,0,0.4)) ;
+        stroke: #ffcc00 ;
+    }
 }

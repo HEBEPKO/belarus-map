@@ -72,6 +72,7 @@ fetch("./regionImages.json")
         let image = pattern.querySelector("image");
         if (!image) {
           image = document.createElementNS(SVG_NS, "image");
+          image.setAttribute("class", "map-img");
           image.setAttribute("id", `img-${regionId}`);
           pattern.appendChild(image);
         }
