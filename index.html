@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фото-карта областей Беларуси</title>
+
+   <link rel="stylesheet" href="css/normalize.css">
+   <link rel="stylesheet" href="css/style.css">
+
+   <!-- <script src="js/generate-path.js"></script> -->
+    <!-- 1. Подключаем файл настроек  -->
+    <script src="js/map.js"></script>
+
+    <!-- 2. Подключаем движок Simplemaps -->
+    <!-- <script src="js/countrymap.js"></script> -->
+</head>
+<body>
+
+    <main style="display: block; text-align: center;">
+        <h1>Фотогалерея областей Беларуси</h1>
+        <p>Нажимайте на области карты для переключения фотографий</p>
+        
+        <div class="map-container">
+            <div id="map">
+              <svg id="belarus-map" xmlns="http://w3.org" viewBox="0 0 1000 871">
+                
+              </svg>
+            </div>
+        </div>
+    </main>
+
+    <!-- 3. Наша чистая и исправленная логика автоматизации -->
+    <script src="js/app.js"></script>
+    
+
+</body>
+</html>
