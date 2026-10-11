@@ -18,7 +18,7 @@ const currentImageIndices = {
 };
 const SVG_NS = "http://www.w3.org/2000/svg";
 
-fetch("../regionImages.json")
+fetch("./regionImages.json")
   .then(response => response.json())
   .then(regionImages => {
     console.log("Автоматически загруженные картинки:", regionImages);

@@ -15,7 +15,7 @@ jobs:
           node-version: 20
       
       - name: Run Generator
-        run: node js/generate-path.js
+        run: node generate-path.js
         
       - name: Commit Changes
         run: |
